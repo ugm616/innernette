@@ -1,3 +1,6 @@
+/* CSS styles for the search-results page */
+
+/* General body styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -6,18 +9,63 @@ body {
     padding: 0;
 }
 
+/* Container styling */
 .container {
     padding: 20px;
 }
 
-.header .logo {
-    display: inline-block;
-    font-size: 24px;
+/* Logo styling with different colors for each letter */
+.logo {
+    font-size: 36px;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
 }
 
+.logo .color1 {
+    color: #FF0000; /* Red */
+}
+
+.logo .color2 {
+    color: #FF7F00; /* Orange */
+}
+
+.logo .color3 {
+    color: #FFFF00; /* Yellow */
+}
+
+.logo .color4 {
+    color: #00FF00; /* Green */
+}
+
+.logo .color5 {
+    color: #0000FF; /* Blue */
+}
+
+.logo .color6 {
+    color: #4B0082; /* Indigo */
+}
+
+.logo .color7 {
+    color: #8B00FF; /* Violet */
+}
+
+/* Form and input styling */
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Results container styling */
 .results-container {
     margin-top: 20px;
 }
