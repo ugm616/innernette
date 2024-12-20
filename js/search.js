@@ -101,6 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <hr>
                             `;
                             resultsDiv.appendChild(resultItem);
+                            console.log('Result added:', fileData.title); // Debugging log
+                        } else {
+                            console.log('No match for:', fileData.title); // Debugging log
                         }
                     })
                     .catch(error => {
