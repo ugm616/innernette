@@ -14,7 +14,13 @@ body {
     padding: 20px;
 }
 
-/* Logo styling with different colors for each letter */
+/* Header styling and form alignment */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .logo {
     font-size: 36px;
     font-weight: bold;
@@ -48,21 +54,28 @@ body {
     color: #8B00FF; /* Violet */
 }
 
-/* Form and input styling */
-form {
-    margin-top: 20px;
+/* Form styling */
+.search-form {
+    display: flex;
+    align-items: center;
 }
 
-input[type="text"] {
+.search-form input[type="text"] {
     padding: 10px;
-    margin-right: 10px;
+    border-radius: 20px;
+    border: 1px solid lightgrey;
     font-size: 16px;
+    outline: none;
+    margin-right: 10px;
 }
 
-button {
+.search-form button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    background-color: white;
 }
 
 /* Results container styling */
