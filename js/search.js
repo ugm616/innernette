@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded event fired'); // Debugging log
+
     const searchForm = document.getElementById('searchForm');
     const searchQueryInput = document.getElementById('searchQuery');
 
     if (searchForm && searchQueryInput) {
+        console.log('Form and input elements found'); // Debugging log
+
         searchForm.addEventListener('submit', function(event) {
             event.preventDefault();
             const query = searchQueryInput.value.toLowerCase();
-            console.log('Search query:', query); // Debugging log
+            console.log('Form submitted with query:', query); // Debugging log
 
             if (query === 'floggle') {
                 window.location.href = 'websites/floogle.html';
@@ -23,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 searchForm.submit();
             }
         });
+    } else {
+        console.error('Form or input elements not found'); // Debugging log
     }
 
     // Function to display search results on the search-results.html page
@@ -70,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         const parser = new DOMParser();
                         const doc = parser.parseFromString(data, 'text/html');
                         const title = doc.querySelector('title') ? doc.querySelector('title').innerText.toLowerCase() : '';
-                        const description = doc.querySelector('meta[name="description"]') ? doc.querySelector('meta[name="description"]').getAttribute('content').toLowerCase() : '';
+                        const description = doc.querySelector('meta[name="description"]') ? doc.querySelector('meta[name="description"]').getAttribute('content') : '';
 
                         // Check if the query matches the title or description
-                        if (title.includes(query) || description.includes(query)) {
+                        if (title.includes(query) || description.toLowerCase().includes(query)) {
                             const resultItem = document.createElement('div');
                             resultItem.innerHTML = `
                                 <div>
