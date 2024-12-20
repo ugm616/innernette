@@ -70,7 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             files.forEach(fileData => {
                 fetch(fileData.file)
-                    .then(response => response.text())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Network response was not ok: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
                     .then(data => {
                         // Extract metadata from the HTML content
                         const parser = new DOMParser();
@@ -91,6 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             `;
                             resultsDiv.appendChild(resultItem);
                         }
+                    })
+                    .catch(error => {
+                        console.error('Fetch error:', error); // Debugging log for fetch errors
                     });
             });
         }
