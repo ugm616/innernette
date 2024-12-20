@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
         // List of files to search with their metadata
         const files = [
             {
-                file: 'websites/cwfindex.html',
+                file: 'websites/cwf/cwfindex.html',
                 title: 'CWF - THE REAL ONE',
                 description: 'The home of outdated Wrestling.',
                 address: 'columbuswrestlingfederation.cum/mainindex.html'
