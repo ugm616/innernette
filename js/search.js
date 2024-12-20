@@ -27,10 +27,10 @@ window.addEventListener('load', function() {
         // List of files to search with their metadata
         const files = [
             {
-                file: 'websites/blog1.html',
-                title: 'Blog 1 Title',
-                description: 'This is the description for Blog 1.',
-                address: 'www.blog1.innernette'
+                file: 'websites/cwfindex.html',
+                title: 'CWF - THE REAL ONE',
+                description: 'The home of outdated Wrestling.',
+                address: 'columbuswrestlingfederation.cum/mainindex.html'
             },
             {
                 file: 'websites/blog2.html',
