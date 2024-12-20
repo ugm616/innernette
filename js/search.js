@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const query = localStorage.getItem('searchQuery');
         console.log('Loaded search query:', query); // Debugging log
 
-        if (query) {
+        if (query && query.trim() !== '') {
             const resultsDiv = document.getElementById('results');
             resultsDiv.innerHTML = '';
 
@@ -71,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.error('Fetch error:', error); // Debugging log for fetch errors
                     });
             });
+        } else {
+            console.log('No search query found'); // Debugging log
         }
     }
 });
