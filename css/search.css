@@ -1,0 +1,41 @@
+/* CSS styles for the search-results page */
+
+/* Apply general styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the content */
+.container {
+    padding: 20px;
+}
+
+/* Header styles for the logo */
+.header .logo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container for the search results */
+.results-container {
+    margin-top: 20px;
+}
+
+/* Styles for individual result items */
+.results-container div {
+    margin-bottom: 10px;
+}
+
+/* Styles for horizontal rules between results */
+.results-container hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
