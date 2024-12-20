@@ -4,6 +4,12 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
 
+    // Redirect to floogle.html if "floggle" is searched
+    if (query === 'floggle') {
+        window.location.href = 'websites/floogle.html';
+        return;
+    }
+
     // List of files to search
     const files = [
         'websites/blog1.html',
