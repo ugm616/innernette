@@ -56,7 +56,14 @@ window.addEventListener('load', function() {
             fetch(fileData.file)
                 .then(response => response.text())
                 .then(data => {
-                    if (data.toLowerCase().includes(query)) {
+                    // Extract metadata from the HTML content
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+                    const title = doc.querySelector('title') ? doc.querySelector('title').innerText.toLowerCase() : '';
+                    const description = doc.querySelector('meta[name="description"]') ? doc.querySelector('meta[name="description"]').getAttribute('content').toLowerCase() : '';
+
+                    // Check if the query matches the title or description
+                    if (title.includes(query) || description.includes(query)) {
                         const resultItem = document.createElement('div');
                         resultItem.innerHTML = `
                             <div>
