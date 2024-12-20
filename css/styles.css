@@ -1,59 +1,79 @@
-/* Dark mode styles */
+/* General body styles */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
+    padding: 0;
 }
 
+/* Container styling */
 .container {
-    text-align: center;
+    padding: 20px;
 }
 
+/* Logo styling with different colors for each letter */
 .logo {
-    font-family: 'Arial', sans-serif;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
 }
 
-.logo span:nth-child(1) {
-    color: #4285F4; /* Google's blue color */
+.logo .color1 {
+    color: #FF0000; /* Red */
 }
 
-.logo span:nth-child(2) {
-    color: #EA4335; /* Google's red color */
+.logo .color2 {
+    color: #FF7F00; /* Orange */
 }
 
+.logo .color3 {
+    color: #FFFF00; /* Yellow */
+}
+
+.logo .color4 {
+    color: #00FF00; /* Green */
+}
+
+.logo .color5 {
+    color: #0000FF; /* Blue */
+}
+
+.logo .color6 {
+    color: #4B0082; /* Indigo */
+}
+
+.logo .color7 {
+    color: #8B00FF; /* Violet */
+}
+
+/* Form and input styling */
 form {
     margin-top: 20px;
 }
 
 input[type="text"] {
     padding: 10px;
+    margin-right: 10px;
     font-size: 16px;
-    width: 300px;
-    border: none;
-    border-radius: 4px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4285F4;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #357AE8;
+/* Results container styling */
+.results-container {
+    margin-top: 20px;
 }
 
-#results {
-    margin-top: 20px;
+.results-container div {
+    margin-bottom: 10px;
+}
+
+.results-container hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
 }
