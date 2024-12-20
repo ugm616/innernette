@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.getElementById('searchForm');
     const searchQueryInput = document.getElementById('searchQuery');
 
+    // Populate the search query input with the current search query
+    const currentQuery = localStorage.getItem('searchQuery');
+    if (currentQuery) {
+        searchQueryInput.value = currentQuery;
+    }
+
     if (searchForm && searchQueryInput) {
         console.log('Form and input elements found'); // Debugging log
 
