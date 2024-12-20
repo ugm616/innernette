@@ -1,36 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded event fired'); // Debugging log
 
-    const searchForm = document.getElementById('searchForm');
-    const searchQueryInput = document.getElementById('searchQuery');
-
-    if (searchForm && searchQueryInput) {
-        console.log('Form and input elements found'); // Debugging log
-
-        searchForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const query = searchQueryInput.value.toLowerCase();
-            console.log('Form submitted with query:', query); // Debugging log
-
-            if (query === 'floggle') {
-                window.location.href = 'websites/floogle.html';
-            } else {
-                localStorage.setItem('searchQuery', query);
-                window.location.href = 'search-results.html';
-            }
-        });
-
-        // Function to handle "Return" key submission
-        searchQueryInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                searchForm.submit();
-            }
-        });
-    } else {
-        console.error('Form or input elements not found'); // Debugging log
-    }
-
     // Function to display search results on the search-results.html page
     if (window.location.pathname.endsWith('search-results.html')) {
         const query = localStorage.getItem('searchQuery');
