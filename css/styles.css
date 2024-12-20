@@ -50,19 +50,36 @@ body {
     color: #8B00FF; /* Violet */
 }
 
-/* Form and input styling */
-form {
+/* Form styling */
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
 
-input[type="text"] {
+.search-form input[type="text"] {
     padding: 10px;
-    margin-right: 10px;
+    border-radius: 20px;
+    border: 1px solid lightgrey;
     font-size: 16px;
+    outline: none;
+    margin-right: 10px;
 }
 
-button {
+.search-form button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+/* Additional styles for images (if needed) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
