@@ -12,8 +12,8 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
 
     // List of files to search
     const files = [
-        'websites/blog1.html',
-        'websites/blog2.html',
+        'websites/floogle.html',
+        'websites/cwfindex.html',
         'websites/shop1.html',
         'websites/shop2.html'
     ];
